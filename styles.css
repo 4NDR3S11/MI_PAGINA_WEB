@@ -49,7 +49,7 @@ body {
   border-radius: 8px;
 }
 
-/* Barra */
+/* Barra lateral */
 .BARRA_LATERAL {
   background: #8059db;
   padding: 20px;
@@ -75,6 +75,7 @@ body {
 .card img {
   width: 100%;
   border-radius: 8px;
+  transition: all 0.5s ease;
 }
 
 /* Pie de página */
@@ -84,4 +85,34 @@ body {
   text-align: center;
   padding: 15px;
   margin-top: 20px;
+}
+
+/* ============================
+   EFECTOS EN LAS TRES IMÁGENES
+=============================== */
+
+/* Imagen 1: Transición de color */
+.img-color {
+  background-color: #33f321;
+  transition: background-color 0.10s ease;
+  padding: 10px;
+}
+
+.img-color:hover {
+  background-color: #d0390b;
+}
+
+/* Imagen 2: Animación de movimiento */
+@keyframes mover {
+  from { transform: translateX(0); }
+  to { transform: translateX(20px); }
+}
+
+.img-movimiento {
+  animation: mover 2s infinite alternate ease-in-out;
+}
+
+/* Imagen 3: Transición de tamaño (sin opacidad) */
+.img-tamano:hover {
+  transform: scale(1.2);
 }
